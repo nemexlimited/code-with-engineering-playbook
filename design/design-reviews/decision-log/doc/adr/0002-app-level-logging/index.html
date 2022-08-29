@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://microsoft.github.io/code-with-engineering-playbook/design/design-reviews/decision-log/doc/adr/0002-app-level-logging/">
       
       <link rel="icon" href="../../../../../../resources/ms_icon.png">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.16">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.2.16">
     
     
       
@@ -2760,6 +2760,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_9_4">
@@ -2812,6 +2814,57 @@
     <li class="md-nav__item">
       <a href="../../../../../../continuous-delivery/recipes/github-workflows/workflow-per-environment/" class="md-nav__link">
         GitHub Workflows
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9_4_2" type="checkbox" id="__nav_9_4_2" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_9_4_2">
+          Terraform
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Terraform" data-md-level="3">
+        <label class="md-nav__title" for="__nav_9_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Terraform
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../continuous-delivery/recipes/terraform/share-common-variables-naming-conventions/" class="md-nav__link">
+        Sharing Common Variables / Naming Conventions Between Terraform Modules
       </a>
     </li>
   
@@ -6942,7 +6995,7 @@
 <h2 id="context">Context</h2>
 <p>Due to the microservices design of the platform, we need to ensure consistency of logging throughout each service so tracking of usage, performance, errors etc. can be performed end-to-end. A single logging/monitoring framework should be used where possible to achieve this, whilst allowing the flexibility for integration/export into other tools at a later stage. The developers should be equipped with a simple interface to log messages and metrics.</p>
 <h2 id="decision">Decision</h2>
-<p>We have agreed to utilise Serilog as the Dotnet Logging framework of choice at the application level, with integration into Log Analytics and Application Insights for analysis.</p>
+<p>We have agreed to utilize Serilog as the Dotnet Logging framework of choice at the application level, with integration into Log Analytics and Application Insights for analysis.</p>
 <h2 id="consequences">Consequences</h2>
 <p>Sampling will need to be configured in Application Insights so that it does not become overly-expensive when ingesting millions of messages, but also does not prevent capture of essential information.
 The team will need to only log what is agreed to be essential for monitoring as part of design reviews, to reduce noise and unnecessary levels of sampling.</p>
@@ -6952,7 +7005,7 @@ The team will need to only log what is agreed to be essential for monitoring as 
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 30, 2021</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 17, 2022</span>
       
     
   </small>
